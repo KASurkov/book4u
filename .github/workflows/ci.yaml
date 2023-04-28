@@ -25,9 +25,7 @@ jobs:
         python -m poetry config virtualenvs.in-project true
     - name: Install dependencies
       run: |
-        python -m poetry add pylint
-        python -m poetry add mypy
-        python -m poetry add pytest
+        python -m poetry install --only dev
     - name: Run Black 
       uses: psf/black@stable
       with:
